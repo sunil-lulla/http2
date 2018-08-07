@@ -11,16 +11,25 @@ const fastify = require("fastify")({
 	}
 });
 
-fastify.get("/", function(request, reply) {
-	reply.code(200).send({ hello: "world" });
+fastify.register(require("./fastify-router"));
+
+// fastify.get("/", function(request, reply) {
+// 	reply.code(200).send({ hello: "world" });
+// });
+console.log(path.join(__dirname, "public"));
+fastify.register(require("fastify-static"), {
+	root: path.join(__dirname, "public"),
+	prefix: "/public/" // optional: default '/'
 });
 
-fastify.listen(3000);
-fastify.ready().then(
-	() => {
-		console.log("successfully booted!");
-	},
-	err => {
-		console.log("an error happened", err);
+// fastify.get("/another", function(req, reply) {
+// 	reply.sendFile(path.join(__dirname, "public", "index.css")); // serving path.join(__dirname, 'public', 'myHtml.html') directly
+// });
+
+fastify.listen(3000, (err, address) => {
+	if (err) {
+		fastify.log.error(err);
+		process.exit(1);
 	}
-);
+	console.log("Server Running on port 3000");
+});
