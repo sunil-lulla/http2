@@ -1,0 +1,29 @@
+{
+  "name": "http2",
+  "version": "1.0.0",
+  "description": "A small POC in nodejs to demonstrate the workflow of http2 using inbuilt http2, hapi, fastify.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunil-lulla/http2.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "http2"
+  ],
+  "author": "Sunil Lulla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunil-lulla/http2/issues"
+  },
+  "homepage": "https://github.com/sunil-lulla/http2#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "fastify": "^1.9.0",
+    "hapi": "^17.5.3",
+    "spdy": "^3.4.7"
+  }
+}
