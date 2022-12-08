@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/sunil-lulla/http2#readme",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "fastify": "^2.15.1",
     "fastify-static": "0.12.0",
     "hapi": "^17.5.3",
